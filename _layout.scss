@@ -1,0 +1,106 @@
+
+
+.navbg {z-index: 8;}
+.nav div {z-index:9;}
+.arrow_down {z-index: 7;}
+
+section {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+}
+
+/*---Page Setup--*/
+.content, .page {
+    position:relative;
+    width: 100%;
+}
+
+.content{
+    height: 100%;
+}
+
+
+.nav div {position:fixed;
+    height: $nav-height;
+    width:(100%/$nav_num);
+    line-height: $nav-height;
+    cursor:pointer;
+    
+    @extend %font-raleway;
+    font-size:$font-size-nav;
+    color:#000;
+    text-decoration:none;
+    text-align:center;
+}
+.navbg {
+    width:$nav-width;
+    height:$nav-height;
+    background: $navbg;
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+.gloss {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("Images/Glossx3.png") bottom center no-repeat;
+  background-size: 700px 100%;
+  z-index: -1;
+}
+
+/*---NavBar alignment--*/
+
+.nav div:nth-child(1){left:0%}
+.nav div:nth-child(2){left:(100%/$nav_num)}
+.nav div:nth-child(3){left:(100%/$nav_num)*2}
+.nav div:nth-child(4){left:(100%/$nav_num)*3}
+.nav div:nth-child(5){left:(100%/$nav_num)*4}
+.nav div:nth-child(6){left:(100%/$nav_num)*5}
+
+
+.arrow_down {
+    position: absolute;
+    left:50%; bottom:20px;
+    width: $arrow-size;
+    height:$arrow-size;
+    margin-left: -25px;
+    cursor: pointer;
+}
+.arrow_down:before {
+    position: absolute;
+    top:25%; right:(25%/2);
+    content: "";
+    width:2px; height: ($arrow-size/2);
+    background:#fff;
+    transform-origin: top;
+    transform: rotate(45deg);
+}
+.arrow_down:after {
+    position: absolute;
+    top:25%; left:(25%/2);
+    content: "";
+    width:2px; height: ($arrow-size/2);
+    background:#fff;
+    transform-origin: top;
+    transform: rotate(-45deg);
+}
+.arrow_down:hover {
+    opacity: 0.5;
+}
+
+.sub {
+    @extend %font-carrois-gothic;
+    color:#fff;
+}
+.emp {
+    @extend %font-catamaran;
+    font-size: 40px;
+    color:#fff;
+}

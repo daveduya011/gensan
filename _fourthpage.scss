@@ -1,0 +1,53 @@
+
+
+/*---2ND Page--*/
+
+
+#s4 {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    min-height: 100%;
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+
+#s4 > #content-1 {
+    @extend %container;
+}
+
+#s4 > #content-2 {
+    @extend %container;
+}
+
+#s4 > #content-3 {
+    @extend %container;
+    
+}
+
+
+
+#s4 > #content-1 > h1 {
+    @extend %heading;
+}
+
+#s4 > #content-2 > h1 {
+    @extend %heading;
+}
+#s4 > #content-3 > h1 {
+    @extend %heading;
+}
+
+
+#s4 > #content-1 > h2 {
+    @extend %text-info;
+}
+
+#s4 > #content-2 > h2 {
+    @extend %text-info;
+}
+
+#s4 > #content-3 > h2 {
+    @extend %text-info;
+   
+}

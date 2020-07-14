@@ -1,0 +1,20 @@
+
+#s3 div {color:#000;}
+
+#s3 {
+    background: $bg2;
+    background-attachment: fixed;
+    background-size: cover;
+    will-change: transform;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    min-height: 100%;
+    padding-top: 90px;
+}
+
+#s3 .map {margin-top: 70px;}
+
+#s3 .arrow_down:before,#s3 .arrow_down:after {
+    background: #000
+}

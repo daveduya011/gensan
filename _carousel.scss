@@ -1,0 +1,22 @@
+
+$caro-width: 100%;
+$caro-image-width:300px;
+$caro-image-height:450px;
+
+.carousel {
+    background: none;
+    width:100%;
+    position: relative;
+    margin-top: 50px;
+    height: $caro-image-height;
+    padding-bottom: 70px;
+}
+
+.caro_image{
+    width: $caro-image-width;
+    height: $caro-image-height;
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left: -($caro-image-width/2);
+}

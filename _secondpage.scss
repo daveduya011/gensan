@@ -1,0 +1,193 @@
+
+%container {
+    position: relative;
+    max-width: 350px;
+    display: inline-block;
+    vertical-align: top;
+}
+%heading {
+    font-size:$font-size-heading;
+    color:$text-color;
+    text-align:center;
+    text-transform: uppercase;
+    margin-top: 40px;
+    @extend %font-raleway-bold;
+}
+%text-info {
+    font-size:$font-size-text;
+    color:$text-color;
+    margin:20px;
+    text-align: justify;
+    @extend %font-catamaran;
+}
+
+
+/*---2ND Page--*/
+
+
+#s2 {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    min-height: 100%;
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+
+#s2 > #content-1 {
+    @extend %container;
+}
+
+#s2 > #content-2 {
+    @extend %container;
+}
+
+#s2 > #content-3 {
+    @extend %container;
+    
+}
+
+
+
+#s2 > #content-1 > h1 {
+    @extend %heading;
+}
+
+#s2 > #content-2 > h1 {
+    @extend %heading;
+}
+#s2 > #content-3 > h1 {
+    @extend %heading;
+}
+
+
+#s2 > #content-1 > h2 {
+    @extend %text-info;
+}
+
+#s2 > #content-2 > h2 {
+    @extend %text-info;
+}
+
+#s2 > #content-3 > h2 {
+    @extend %text-info;
+   
+}
+
+/**COUNTER**/
+#s2 > #content-1 > .counter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+#s2 > #content-1 #counter_number {
+    position: relative;
+    font-size:63px;
+    color:$counter-number-color;
+    display: inline-block;
+    @extend %font-raleway-thin;
+    line-height: 0;
+}
+
+#s2 > #content-1 #counter_th {
+    position: relative;
+    font-size:30px;
+    color:$counter-number-color;
+    display: inline-block;
+    @extend %font-raleway;
+}
+
+
+#s2 > #content-2 > .icon {
+    position: relative;
+    width:$fish_size;
+    margin-top: ($fish_size/2)+7px;
+    margin-bottom: 23px;
+    fill: $fish-color;
+    animation:zoom_in_out 1.25s infinite ease-in-out alternate-reverse;
+}
+
+#s2 > #content-3 > .icon {
+    position: relative;
+    fill:$boxing-color;
+    width:$boxing-icon-size;
+    height:$boxing-icon-size;
+}
+
+.circle_atom {
+    width:$orbiting_circle_size;
+    height:$orbiting_circle_size;
+    position: absolute;
+    left: 50%;
+    margin-left: -($orbiting_circle_size/2);
+}
+.circle_atom .orbit {
+    cx:($orbiting_circle_size/2);
+    cy:($orbiting_circle_size/2);
+    r:$orbiting_circle_radius;
+    stroke:$orbiting_circle_color;
+    fill:none;
+    stroke-width:$orbiting_circle_stroke_width;
+}
+@mixin tinyCircle{
+    cx:($orbiting_circle_size/2) - $orbiting_circle_radius;
+    cy:($orbiting_circle_size/2);
+    r:$orbiting_circle_tiny_radius;
+    fill:$orbiting_circle_color;
+    transform-origin: ($orbiting_circle_size/2);
+}
+.circle_atom .circle_tiny:nth-last-of-type(1) {
+    @include tinyCircle;
+    animation:orbit1 2.5s infinite $orbiting_circle_bezier;
+}
+.circle_atom .circle_tiny:nth-last-of-type(2) {
+    @include tinyCircle;
+    animation:orbit2 2.5s infinite $orbiting_circle_bezier;
+}
+.circle_atom .circle_tiny:nth-last-of-type(3) {
+    @include tinyCircle;
+    animation:orbit3 2.5s infinite $orbiting_circle_bezier;
+}
+
+@keyframes orbit1 {
+    0%{transform: rotate(45deg)}
+    50%{transform: rotate(225deg)}
+    100%{transform: rotate(405deg)}
+}
+@keyframes orbit2 {
+    0%{transform: rotate(45deg + 120deg)}
+    50%{transform: rotate(225deg + 120deg)}
+    100%{transform: rotate(405deg + 120deg)}
+}
+@keyframes orbit3 {
+    0%{transform: rotate(45deg + 240deg)}
+    50%{transform: rotate(225deg + 240deg)}
+    100%{transform: rotate(405deg + 240deg)}
+}
+@keyframes zoom_in_out {
+    0% {transform:perspective(200px) rotate3d(0,0.10,0,20deg)}
+    100% {transform:perspective(200px) rotate3d(0,-0.10,0,20deg)}
+}
+
+
+#s2 > #content-3 > .icon .leftglove{
+    transform-origin: 20px 380px;
+    animation: boxing 3s $boxing-bezier infinite alternate;
+}
+#s2 > #content-3 > .icon .rightglove{
+    transform-origin: center;
+    animation: movearm 0.6s ease infinite alternate;
+}
+@keyframes boxing {
+    0%{transform:scale(1) translateX(0px)}
+    10%{transform:scale(2.5) rotate(10deg)}
+    20%{transform:scale(1)}
+    100%{transform:scale(1) translateX(-5px) rotate(-2deg) translateY(20px)}
+}
+
+@keyframes movearm {
+    0% {transform: translateX(0px)}
+    100% {transform: translateX(-10px) rotate(-2deg) translateY(20px)}
+}

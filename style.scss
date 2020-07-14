@@ -1,0 +1,205 @@
+@import 'vars';
+@import 'fonts';
+@import 'layout';
+@import 'firstpage';
+@import 'secondpage';
+@import 'thirdpage';
+@import 'fourthpage';
+@import 'carousel';
+
+html, body {
+    width:100%;
+    height: 100%;
+    overflow-x: hidden;
+    
+    background: $bg-color;
+}
+body {
+    width:100%;
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+}
+
+/**
+#r4:checked ~ .content > #s3 > h1{animation:overlap 0.6s ease-in-out;}
+#r4:checked ~ .content > #s3 > h2{animation:overlap 0.6s ease-in-out;}
+#r4:checked ~ .content > #s3 > label{animation:overlap 0.6s ease-in-out;}
+#r4:checked ~ .content > #s3 > #content-1 {animation:overlap 0.6s ease-in-out;}
+
+#s4 {background:#faa;}
+
+#s4 > h1 {position:absolute; top:10%; left:10%; width:80%; text-align:center; color:#fff;
+		font-family:"Raleway"; font-size:50px; opacity:0;}
+
+#s4 > #content-1 {position:absolute; top:12%; left:0%; width:20%;
+		background:url("Images/sm.jpg"); background-size:cover; height:60%; margin-left:1.5%;
+		 transition:all 0.3s ease-in-out; margin-top: 50px;}
+#s4 > #content-1 > h1 {font-size:30px; color:#fff; margin:20px; text-align:center; font-family:"Raleway"}
+#s4 > #content-1 > h2 {font-size:18px; color:#fff; margin:20px; text-align:center; font-family:"Raleway"; font-weight:200; opacity:0;}
+
+#s4 > #content-2 {position:absolute; top:12%; left:25%; width:20%;
+		background:url("Images/tunapark.jpg"); background-size:cover; height:60%; margin-left:1.5%;
+		 transition:all 0.2s ease-in-out; margin-top: 50px;}
+#s4 > #content-2 > h1 {font-size:30px; color:#fff; margin:20px; text-align:center; font-family:"Raleway"}
+
+#s4 > #content-3 {position:absolute; top:12%; left:50%; width:20%;
+		background:url("Images/hotel1.jpg"); background-size:cover; height:60%; margin-left:1.5%;
+		 transition:all 0.3s ease-in-out; margin-top: 50px;}
+#s4 > #content-3 > h1 {font-size:30px; color:#fff; margin:20px; text-align:center; font-family:"Raleway"}
+
+#s4 > #content-4 {position:absolute; top:12%; left:75%; width:20%;
+		background:url("Images/palaza-heneral-santos1.jpg"); background-size:cover; height:60%; margin-left:1.5%;
+		 transition:all 0.3s ease-in-out; margin-top: 50px;}
+#s4 > #content-4 > h1 {color:#fff; margin:20px; text-align:center; font-family:"Raleway"}
+ 
+#s4 > #close {position:absolute; top:10%; right:5%; width:50px; height:50px; background:#ff4444; z-index:50; opacity:0;}
+#s4 > #close > h1 {color:#fff; margin-top:14px; text-align:center; font-family:"Raleway"; font-size:20px; font-weight: 200;}
+
+#i1 {position:absolute; top:12%; left:1.8%; width:20%; height:80%; z-index:30;}
+#i2 {position:absolute; top:12%; left:26.8%; width:20%; height:80%; z-index:30;}
+#i3 {position:absolute; top:12%; left:51.8%; width:20%; height:80%; z-index:30;}
+#i4 {position:absolute; top:12%; left:76.8%; width:20%; height:80%; z-index:30;}
+#i5 {position:absolute; top:10%; right:5%; width:50px; height:50px; z-index:50; z-index:51; cursor:pointer;}
+
+#s4 > input {cursor:pointer; opacity:0;}
+#s4 > input:checked ~ #close{opacity:1;}
+#s4 > #i5:checked ~ #close{opacity:0}
+
+#s4 > #i1:checked ~ #content-1 {width:95%; z-index:31; left:0%;}
+#s4 > #i2:checked ~ #content-2  {width:95%; z-index:31; left:0%;}
+#s4 > #i3:checked ~ #content-3 {width:95%; z-index:31; left:0%;}
+#s4 > #i4:checked ~ #content-4  {width:95%; z-index:31; left:0%;}
+
+#s4 > #i1:checked ~ div > .detail {transition:all 1s ease-in-out;}
+#s4 > #i1:checked ~ div > .detail {opacity:1;}
+
+#s4 > label:after {content:attr(data-icon);
+		position:absolute; bottom:0; left:10%; width:80%; text-align:center; color:#fff;
+		font-family:"Wingdings 3"; font-size:50px; cursor:pointer;}
+		
+#r4:checked ~ .content > #s4 > #content-1{animation:fromCenter 1.2s ease-out;}
+#r4:checked ~ .content > #s4 > #content-2{animation:fromCenter 1.4s ease-out;}
+#r4:checked ~ .content > #s4 > #content-3{animation:fromCenter 1.6s ease-out;}
+#r4:checked ~ .content > #s4 > #content-4{animation:fromCenter 1.8s ease-out;}
+
+@keyframes fromCenter {
+	0% {-webkit-transform:translateY(100px) rotate(90deg); }
+	80% {-webkit-transform:translateY(100px) rotate(90deg); }
+	95% {-webkit-transform:translateY(0px) rotate(-10deg); }
+	100% {-webkit-transform:translate3d(0,0,0) rotate(0deg)}
+}
+
+#r4:checked ~ .content > #s4 > h1{animation:fadeinthenout 1.4s ease-out;}
+@keyframes fadeinthenout {
+	0% {opacity:0}
+	90% {opacity:1}
+	100% {opacity:0;}
+}
+@keyframes overlap {
+	0% {transform:translateY(0px)}
+	100% {transform:translateY(450px)}
+}
+
+#s5 {background:rgba(255,255,255,0.7);}
+#s5 > h1 {position:absolute; top:10%; left:10%; width:80%; text-align:center; color:#555;
+		font-family:"Raleway"; font-size:50px; opacity:0;}
+
+#s5 > #content-1 {position:absolute; top:25%; left:0%; width:20%; border:0.6vw #555 dashed;
+		background:rgba(255,255,255,0.5); background-size:cover; height:50%; margin-left:1.5%;
+		 transition:all 0.3s ease-in-out; }
+#s5 > #content-1 > h1 {font-size:2vw; color:#555; margin:20px; text-align:center; font-family:"Raleway"}
+#s5 > #content-1 > img {width:80%; border-radius:300px; margin-left:10%; position:absolute; top:32%;}
+
+
+#s5 > #content-2 {position:absolute; top:25%; left:25%; width:20%; border:0.6vw #555 dashed;
+		background:rgba(255,255,255,0.5); background-size:cover; height:50%; margin-left:1.5%;
+		 transition:all 0.2s ease-in-out;}
+#s5 > #content-2 > h1 {font-size:2vw; color:#555; margin:20px; text-align:center; font-family:"Raleway"}
+#s5 > #content-2 > img {width:80%; border-radius:300px; margin-left:10%; position:absolute; top:32%}
+
+#s5 > #content-3 {position:absolute; top:25%; left:50%; width:20%; border:0.6vw #555 dashed;
+		background:rgba(255,255,255,0.5); background-size:cover; height:50%; margin-left:1.5%;
+		 transition:all 0.3s ease-in-out;}
+#s5 > #content-3 > h1 {font-size:1.7vw; color:#555; margin:20px; text-align:center; font-family:"Raleway"}
+#s5 > #content-3 > img {width:80%; border-radius:300px; margin-left:10%; position:absolute; top:32%}
+
+#s5 > #content-4 {position:absolute; top:25%; left:75%; width:20%; border:0.6vw #555 dashed;
+		background:rgba(255,255,255,0.5); background-size:cover; height:50%; margin-left:1.5%;
+		 transition:all 0.3s ease-in-out;}
+#s5 > #content-4 > h1 {font-size:2vw; color:#555; margin:20px; text-align:center; font-family:"Raleway"}
+#s5 > #content-4 > img {width:80%; border-radius:300px; margin-left:10%; position:absolute; top:32%}
+
+#r5:checked ~ .content > #s5 > #content-1{animation:fromUp 0.6s ease-out;}
+#r5:checked ~ .content > #s5 > #content-2{animation:fromUp 0.6s ease-out;}
+#r5:checked ~ .content > #s5 > #content-3{animation:fromUp 0.6s ease-out;}
+#r5:checked ~ .content > #s5 > #content-4{animation:fromUp 0.6s ease-out;}
+
+#s6 {
+    background:#fff;
+}
+#s6 > h1 {
+    position: absolute; text-align: center;
+    top:200px;
+    width:500px;
+    left:50%;
+    margin-left: -255px;
+    font-family: "Raleway";
+    font-weight: 800;
+}
+#s6 > h2 {
+    position: absolute; text-align: center;
+    top:300px;
+    width:800px;
+    left:50%;
+    margin-left: -400px;
+    font-family: "Raleway";
+    font-weight: 200;
+    font-size: 17px;
+}
+#s7 {
+    background:#fff;
+}
+#s7 > h1 {
+    position: absolute; text-align: center;
+    top:200px;
+    width:500px;
+    left:50%;
+    margin-left: -255px;
+    font-family: "Raleway";
+    font-weight: 800;
+}
+#s7 > h2 {
+    position: absolute; text-align: center;
+    top:300px;
+    width:800px;
+    left:50%;
+    margin-left: -400px;
+    font-family: "Raleway";
+    font-weight: 200;
+    font-size: 17px;
+}
+#s8 {
+    background:#fff;
+}
+#s8 > h1 {
+    position: absolute; text-align: center;
+    top:200px;
+    width:500px;
+    left:50%;
+    margin-left: -255px;
+    font-family: "Raleway";
+    font-weight: 800;
+}
+#s8 > h2 {
+    position: absolute; text-align: center;
+    top:300px;
+    width:800px;
+    left:50%;
+    margin-left: -400px;
+    font-family: "Raleway";
+    font-weight: 200;
+    font-size: 17px;
+}
+
+**/

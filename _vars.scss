@@ -1,0 +1,70 @@
+$bg1: #000;
+$bg2: url('Images/2.gif');
+$bg3: #672A2A;
+$bg4: #DE5D5D;
+$bg5: #FF6E6E;
+
+
+$background: url("Images/bg.gif");
+$gloss: url("Images/Glossx3.png");
+$primary-color: #3051c9;
+$primary-color-light: #d5d5f1;
+$bg-color: #0f0f0f;
+$text-color:#fff;
+$nav_num : 6;
+$nav-width:100%;
+$nav-height: 43px;
+$navbg:#fff;
+$transspeed : cubic-bezier(.65,.10,.0,.65);
+$arrow-size: 24px;
+
+$font-size-nav:13px;
+$font-size-title:45px;
+$font-size-subtitle:13px;
+$font-size-text:14px;
+$font-size-heading:16px;
+
+$orbiting_circle_color: $primary-color-light;
+$orbiting_circle_size:120px;
+$orbiting_circle_tiny_radius:5px;
+$orbiting_circle_radius:($orbiting_circle_size/2) - $orbiting_circle_tiny_radius;
+$orbiting_circle_stroke_width:1.5px;
+$orbiting_circle_bezier: cubic-bezier(.18,.72,.82,.29);
+
+$boxing-bezier: cubic-bezier(.73,.19,.03,.99);
+$boxing-icon-size: 100px;
+$boxing-color: $primary-color-light;
+
+$fish_size:70px;
+$fish-color: $primary-color;
+
+$counter-number-color: $primary-color-light;
+
+%font-raleway-thin {
+    font-family: "Raleway";
+    font-weight: 100;
+}
+%font-raleway-light {
+    font-family: "Raleway";
+    font-weight: 200;
+}
+%font-raleway {
+    font-family: "Raleway";
+    font-weight: 400;
+}
+%font-raleway-bold {
+    font-family: "Raleway";
+    font-weight: 800;
+}
+%font-raleway-black {
+    font-family: "Raleway";
+    font-weight: 900;
+}
+%font-catamaran {
+    font-family: "Catamaran";
+    font-weight: 400;
+}
+%font-carrois-gothic {
+    font-family: "Carrois Gothic SC";
+    font-weight: 400;
+}
